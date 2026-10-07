@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Фотографии</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #050505, #3b0505, #090909);
+        color: white;
+    }
+
+    .box {
+        width: 90%;
+        max-width: 380px;
+        padding: 35px 25px;
+        text-align: center;
+        background: rgba(15, 15, 15, 0.92);
+        border-radius: 20px;
+        box-shadow: 0 0 40px rgba(0,0,0,0.7);
+    }
+
+    h1 {
+        margin-bottom: 25px;
+        font-size: 28px;
+    }
+
+    input {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid #555;
+        background: #111;
+        color: white;
+        outline: none;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 15px;
+        padding: 15px;
+        font-size: 17px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: white;
+        color: black;
+    }
+
+    button:hover {
+        background: #ddd;
+    }
+
+    #error {
+        margin-top: 12px;
+        color: #ff5555;
+        min-height: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Введи пароль, пенсия</h1>
+
+    <input 
+        type="password" 
+        id="password" 
+        placeholder="Пароль"
+    >
+
+    <button onclick="checkPassword()">Войти</button>
+
+    <div id="error"></div>
+</div>
+
+<script>
+function checkPassword() {
+    const password = document.getElementById("password").value;
+
+    if (password === "10102007") {
+        window.location.href = "https://www.wedibox.com/w/recekhcVwpdocKIU";
+    } else {
+        document.getElementById("error").textContent = "Неверный пароль";
+    }
+}
+</script>
+
+</body>
+</html>
